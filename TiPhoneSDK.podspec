@@ -20,19 +20,15 @@ Pod::Spec.new do |spec|
 
   spec.license      = { :type => 'MIT', :file => 'LICENSE' }
   spec.author           = { 'gyb1314' => 'gyb_1314@126.com' }
-  spec.source           = { :git => 'git@github.com:ti-net-project/TPhoneSDK-iOS.git', :tag => spec.version.to_s }
+  spec.source           = { :git => 'https://github.com/ti-net-project/TPhoneSDK-iOS.git', :tag => spec.version.to_s }
 
   #spec.platform     = :ios, "11.0"
-spec.ios.deployment_target = '13.0'
+  spec.ios.deployment_target = '13.0'
 
-  spec.vendored_frameworks  = "TiPhoneSDK.xcframework"
-  spec.vendored_frameworks  = "TPhoneSDKCore.xcframework"
-  spec.vendored_frameworks  = "WebRTC.framework"
-
- #spec.pod_target_xcconfig = {'VALID_ARCHS'=>'arm64 x86_64','EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-  #spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-
-  #spec.user_target_xcconfig = { 'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES' }
-  #spec.pod_target_xcconfig = { 'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES' }
+  spec.ios.vendored_frameworks  = "TiPhoneSDK.framework"
+ 
+  #spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 arm64' }
+  spec.pod_target_xcconfig = {'VALID_ARCHS'=>'arm64 x86_64','EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 
 end
