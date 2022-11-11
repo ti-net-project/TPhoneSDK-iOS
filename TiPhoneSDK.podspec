@@ -13,19 +13,21 @@ Pod::Spec.new do |spec|
   spec.summary      = "TiPhoneSDK iOS 实时语音呼叫SDK"
 
   spec.description  = <<-DESC
+  TODO: Add long description of the pod here.
                    DESC
 
-  spec.homepage     = "https://github.com/ti-net-project/TPhoneSDK-iOS"
+  spec.homepage     = "https://github.com/ti-net-project/TPhoneSDK-iOS.git"
 
   spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
-  s.author           = { 'gyb1314' => 'gyb_1314@126.com' }
-  s.source           = { :git => 'https://github.com/ti-net-project/TPhoneSDK-iOS', :tag => s.version.to_s }
+  spec.author           = { 'gyb1314' => 'gyb_1314@126.com' }
+  spec.source           = { :git => 'https://github.com/ti-net-project/TPhoneSDK-iOS.git', :tag => spec.version.to_s }
 
-  s.ios.deployment_target = '11.0'
-  s.vendored_frameworks  = "TPhoneSDKCore.xcframework"
-  s.vendored_frameworks  = "WebRTC.framework"
+  spec.ios.deployment_target = '11.0'
+  spec.vendored_frameworks  = "TiPhoneSDK.xcframework"
+  spec.vendored_frameworks  = "TPhoneSDKCore.xcframework"
+  spec.vendored_frameworks  = "WebRTC.framework"
 
-  s.pod_target_xcconfig = {'VALID_ARCHS'=>'arm64 x86_64','EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+ #spec.pod_target_xcconfig = {'VALID_ARCHS'=>'arm64 x86_64','EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  #spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 
 end
