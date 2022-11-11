@@ -23,11 +23,14 @@ Pod::Spec.new do |spec|
   spec.source           = { :git => 'git@github.com:ti-net-project/TPhoneSDK-iOS.git', :tag => spec.version.to_s }
 
   spec.platform     = :ios, "11.0"
-  spec.vendored_frameworks  = "TiPhoneSDK.framework"
+  spec.ios.vendored_frameworkss  = "TiPhoneSDK.xcframework"
   #spec.vendored_frameworks  = "TPhoneSDKCore.xcframework"
   #spec.vendored_frameworks  = "WebRTC.framework"
 
  spec.pod_target_xcconfig = {'VALID_ARCHS'=>'arm64 x86_64','EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   #spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+
+  spec.user_target_xcconfig = { 'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES' }
+  spec.pod_target_xcconfig = { 'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES' }
 
 end
