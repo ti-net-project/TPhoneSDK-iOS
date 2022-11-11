@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   TODO: Add long description of the pod here.
                    DESC
 
-  spec.homepage     = "https://github.com/ti-net-project/TPhoneSDK-iOS.git"
+  spec.homepage     = "https://github.com/ti-net-project/TPhoneSDK-iOS"
 
   spec.license      = { :type => 'MIT', :file => 'LICENSE' }
   spec.author           = { 'gyb1314' => 'gyb_1314@126.com' }
@@ -26,8 +26,8 @@ Pod::Spec.new do |spec|
 spec.ios.deployment_target = '13.0'
 
   spec.vendored_frameworks  = "TiPhoneSDK.xcframework"
-  #spec.vendored_frameworks  = "TPhoneSDKCore.xcframework"
-  #spec.vendored_frameworks  = "WebRTC.framework"
+  spec.vendored_frameworks  = "TPhoneSDKCore.xcframework"
+  spec.vendored_frameworks  = "WebRTC.framework"
 
  #spec.pod_target_xcconfig = {'VALID_ARCHS'=>'arm64 x86_64','EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   #spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
