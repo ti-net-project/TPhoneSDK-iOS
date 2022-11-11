@@ -22,8 +22,10 @@ Pod::Spec.new do |spec|
   spec.author           = { 'gyb1314' => 'gyb_1314@126.com' }
   spec.source           = { :git => 'git@github.com:ti-net-project/TPhoneSDK-iOS.git', :tag => spec.version.to_s }
 
-  spec.platform     = :ios, "11.0"
-  spec.ios.vendored_frameworkss  = "TiPhoneSDK.xcframework"
+  #spec.platform     = :ios, "11.0"
+spec.ios.deployment_target = '13.0'
+
+  spec.vendored_frameworks  = "TiPhoneSDK.xcframework"
   #spec.vendored_frameworks  = "TPhoneSDKCore.xcframework"
   #spec.vendored_frameworks  = "WebRTC.framework"
 
