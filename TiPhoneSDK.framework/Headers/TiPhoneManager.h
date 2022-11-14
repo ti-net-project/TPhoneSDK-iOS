@@ -9,11 +9,13 @@
 #import <TiPhoneSDK/TiPhoneListener.h>
 NS_ASSUME_NONNULL_BEGIN
 
+// 登录账号类型
 typedef enum : NSUInteger {
-    TiPhoneLoginType_CrmIdAndPwd,
-    TiPhoneLoginType_CnoAndToken,
+    TiPhoneLoginType_CrmIdAndPwd, // 员工和密码登录
+    TiPhoneLoginType_CnoAndToken, // 坐席编号和token登录
 } TiPhoneLoginType;
 
+// 平台类型
 typedef enum : NSUInteger {
     TiPhonePlatformType_CTI,
     TiPhonePlatformType_Clink2,
@@ -25,12 +27,18 @@ typedef enum : NSUInteger {
 
 + (instancetype)sharedTestManger;
 
+/**
+ 初始化对象
+ @param url 平台url
+ @param setDebug 是否Debug环境
+ */
 - (void)initSDK:(nullable NSString *)url setDebug:(BOOL)setDebug;
 
 /**
  座席上线接口
  @param enterpriseId 企业id
  @param loginType 登录类型 @"crmIdAndPwd" / @"conAndToken"
+ @param platformType 平台类型
  @param loginKey 员工工号 / 座席工号
  @param loginSecret 员工密码 / 企业的token值
  @param bindTel 所要绑定的手机号码
