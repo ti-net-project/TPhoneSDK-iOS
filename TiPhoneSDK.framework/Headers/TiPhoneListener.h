@@ -34,6 +34,22 @@ const static int MESSAGE_AGENT_AXB_ERROR                        = 401;    // AXB
 const static int MESSAGE_AGENT_PREVIEWCALL_ERROR                = 402;    // 预览外呼错误信息
 const static int MESSAGE_NETPEER_CLOSED                         = 410;    //
 
+
+const static int LOGIN_AUTH_ERROR                               = 10001;    //鉴权错误，请检查输入的企业Id,账号和密码是否正确。
+const static int LOGIN_ERROR                                    = 10002; // 登录错误
+const static int LOGIN_VERIFICATION_ERROR                       = 10003;//请求语音验证错误
+const static int LOGIN_CONFIRM_VERIFICATION_ERROR               = 10004; // 确认验证码错误
+const static int LOGIN_CHANGE_PWD_ERROR                         = 10005; // 修改密码错误
+const static int LOGIN_PREVIEW_OUTCALL_ERROR                    = 10006; //预览外呼错误
+const static int LOGIN_NETWORK_ERROR                            = 10007; // 网络请求失败
+const static int LOGIN_NO_SUPPORT_ERROR                         = 10008; // 不支持的功能
+const static int LOGIN_AGENT_PAUSE_ERROR                        = 10009; // 坐席置忙错误
+const static int LOGIN_AGENT_UNPAUSE_ERROR                      = 10011; // 坐席置闲错误
+const static int LOGIN_AGENT_GET_ERROR                          = 10012; //获取坐席状态
+const static int LOGIN_WEBSOCKET_ERROR                          = 10013; // WebSocket链接错误
+const static int LOGIN_AGENT_Status_ERROR                       = 10014; // 座席状态错误
+
+
 typedef void (^TiSuccessCallback)(NSString * _Nullable data);
 typedef void (^TiFailureCallback)(NSInteger code, NSString * _Nullable msg);
 

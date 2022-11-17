@@ -41,23 +41,23 @@ typedef enum : NSUInteger {
  @param platformType 平台类型
  @param loginKey 员工工号 / 座席工号
  @param loginSecret 员工密码 / 企业的token值
- @param bindTel 所要绑定的手机号码
+ @param bindTel 绑定的手机号码
  @param showName 系统内部显示名称
  @param isTelExplicit 是否需要手机号外显
  @param advanceParams 外部动态配置
  @param successBlock  登录成功的回调
  @param errorBlock   登录失败的回调 [status:失败的错误码]
  
- 注: strCrmId和strCNO二选一 如果都写上则默认选择员工工号 其中strCrmId和strCrmPassword是一对鉴权方式  strCno和strEnterpriseToken是一对鉴权方式
+ 注: strCrmId和strCrmPassword是一对鉴权方式  strCno和strEnterpriseToken是一对鉴权方式
 */
-- (void)loginTiPhone:(NSString *)enterpriseId loginType:(TiPhoneLoginType)loginType platformType:(TiPhonePlatformType)platformType loginKey:(NSString *)loginKey loginSecret:(NSString *)loginSecret  bindTel:(NSString *)bindTel showName:(nullable NSString *)showName isTelExplicit:(BOOL)isTelExplicit advanceParams:(NSDictionary *)advanceParams success:(nullable void (^)(NSString *data))successBlock error:(nullable void (^)(NSInteger status,NSString *errorDes))errorBlock;
+- (void)loginTiPhone:(NSString *)enterpriseId loginType:(TiPhoneLoginType)loginType platformType:(TiPhonePlatformType)platformType loginKey:(NSString *)loginKey loginSecret:(NSString *)loginSecret  bindTel:(NSString *)bindTel showName:(nullable NSString *)showName isTelExplicit:(BOOL)isTelExplicit advanceParams:(NSDictionary *)advanceParams success:(nullable TiSuccessCallback)successBlock error:(nullable TiFailureCallback)errorBlock;
 
 /**
  更新员工密码 (仅支持密码登录用户 token鉴权方式不支持)
  @param oldPassword 旧密码
  @param newPassword 新密码
  */
-- (void)changePassword:(NSString *)oldPassword newPassword:(NSString *)newPassword success:(nullable void (^)(NSString *data))successBlock error:(nullable void (^)(NSInteger status,NSString *errorDes))errorBlock;
+- (void)changePassword:(NSString *)oldPassword newPassword:(NSString *)newPassword success:(nullable TiSuccessCallback)successBlock error:(nullable TiFailureCallback)errorBlock;
 
 /**
  拨打电话
@@ -67,10 +67,10 @@ typedef enum : NSUInteger {
  @param userField 自定义参数  注:key/value 键值对最多支持5对，key小于20字节，value小于100字节
 */
 -(void)call:(NSString * _Nonnull)number obClid:(NSString *) obClid
-requestUniqueId:(NSString* _Nonnull)requestUniqueId userField:(NSDictionary *_Nullable)userField;
+requestUniqueId:(NSString*)requestUniqueId userField:(NSDictionary *)userField;
 
 /**
- 设置回调接口(回调消息为拨打电话之后的消息)
+ 设置回调接口(回调消息为拨打电话之后的消息) ， 必须在登录之前调用
  @param listener TiPhoneMessageListener接口的实例
  */
 -(void)setOnEventListener:(id<TiOnEventListener>)listener;
@@ -114,7 +114,8 @@ requestUniqueId:(NSString* _Nonnull)requestUniqueId userField:(NSDictionary *_Nu
  */
 -(void)hungUp;
 
-- (void)logoutTiPhone:(nullable void (^)(NSString *data))successBlock error:(nullable void (^)(NSInteger status,NSString *errorDes))errorBlock;
+/// 退出登录
+- (void)logoutTiPhone:(nullable TiSuccessCallback)successBlock error:(nullable TiFailureCallback)errorBlock;
 
 /**
  认证语音验证码
@@ -122,35 +123,35 @@ requestUniqueId:(NSString* _Nonnull)requestUniqueId userField:(NSDictionary *_Nu
  @param successBlock  成功的回调
  @param errorBlock   失败的回调 [status:失败的错误码]
  */
-- (void)confirmVerification:(NSString *)code success:(void (^)(NSString *data))successBlock error:(void (^)(NSInteger status,NSString *errorDes))errorBlock;
+- (void)confirmVerification:(NSString *)code success:(TiSuccessCallback)successBlock error:(TiFailureCallback)errorBlock;
 
 /**
  预览外呼
  @param phoneNumber 需要拨打的手机号
  @param obClid 客户外显号码
 */
-- (void)previewOutCall:(NSString *)phoneNumber obClid:(nullable NSString *)obClid success:(nullable void (^)(NSString *data))successBlock error:(nullable void (^)(NSInteger status,NSString *errorDes))errorBlock;
+- (void)previewOutCall:(NSString *)phoneNumber obClid:(nullable NSString *)obClid success:(nullable TiSuccessCallback)successBlock error:(nullable TiFailureCallback)errorBlock;
 
 /**
  获取坐席置忙描述列表
  */
-- (void)getAgentSettings:(void (^)(NSString *data))successBlock error:(nullable void (^)(NSInteger status,NSString *errorDes))errorBlock;
+- (void)getAgentSettings:(TiSuccessCallback)successBlock error:(nullable TiFailureCallback)errorBlock;
 
 /**
  获取坐席当前状态
  */
-- (void)getAgentStatus:(nullable void (^)(NSString *data))successBlock error:(nullable void (^)(NSInteger status,NSString *errorDes))errorBlock;
+- (void)getAgentStatus:(nullable TiSuccessCallback)successBlock error:(nullable TiFailureCallback)errorBlock;
 
 /**
  坐席置忙
  @param description  设置的置忙描述 需要在获取坐席可用置忙描述列表中选择
  */
-- (void)setAgentPause:(nullable NSString *)description success:(nullable void (^)(NSString *data))successBlock error:(nullable void (^)(NSInteger status,NSString *errorDes))errorBlock;
+- (void)setAgentPause:(nullable NSString *)description success:(nullable TiSuccessCallback)successBlock error:(nullable TiFailureCallback)errorBlock;
 
 /**
  坐席置闲
  */
-- (void)setAgentUnPause:(nullable void (^)(NSString *data))successBlock error:(nullable void (^)(NSInteger status,NSString *errorDes))errorBlock;
+- (void)setAgentUnPause:(nullable TiSuccessCallback)successBlock error:(nullable TiFailureCallback)errorBlock;
 
 /**
  设置是否需要手机号外显
@@ -161,7 +162,7 @@ requestUniqueId:(NSString* _Nonnull)requestUniqueId userField:(NSDictionary *_Nu
  Voip转预览外呼
  @param requestUniqueId 通话的唯一标识 如果传入为@"" 则sdk生成并在消息中返回所生成的唯一标识 P-Tinet-Request-Unique-Id
 */
--(void)transferCall:(NSString *_Nonnull)requestUniqueId success:(nullable void (^)(NSString *data))successBlock error:(nullable void (^)(NSInteger status,NSString *errorDes))errorBlock;
+-(void)transferCall:(NSString *_Nonnull)requestUniqueId success:(nullable TiSuccessCallback)successBlock error:(nullable TiFailureCallback)errorBlock;
 
 /**
  获取sdk版本号

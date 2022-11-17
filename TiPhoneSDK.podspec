@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "TiPhoneSDK"
-  spec.version      = "1.0.0"
+  spec.version      = "1.0.1"
   spec.summary      = "TiPhoneSDK iOS 实时语音呼叫SDK"
 
   spec.description  = <<-DESC
@@ -27,8 +27,8 @@ Pod::Spec.new do |spec|
 
   spec.ios.vendored_frameworks  = "TiPhoneSDK.framework", "TPhoneSDKCore.xcframework", "WebRTC.framework"
 
-  spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 arm64' }
-  #spec.pod_target_xcconfig = {'VALID_ARCHS'=>'arm64 x86_64','EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-  #spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  #spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 arm64' }
+  spec.pod_target_xcconfig = {'VALID_ARCHS'=>'arm64 x86_64','EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 
 end
