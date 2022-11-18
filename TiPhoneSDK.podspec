@@ -25,7 +25,7 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, "11.0"
   #spec.ios.deployment_target = '13.0'
 
-  spec.ios.vendored_frameworks  = "TiPhoneSDK.xcframework", "TPhoneSDKCore.xcframework", "WebRTC.framework"
+  spec.ios.vendored_frameworks  = "TiPhoneSDK.framework", "TPhoneSDKCore.xcframework", "WebRTC.framework"
 
   #spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 arm64' }
   spec.pod_target_xcconfig = {'VALID_ARCHS'=>'arm64 x86_64','EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
