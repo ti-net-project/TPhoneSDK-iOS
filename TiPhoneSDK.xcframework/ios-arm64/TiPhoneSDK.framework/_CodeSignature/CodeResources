@@ -14,7 +14,7 @@
 		</data>
 		<key>Frameworks/WebRTC.framework/WebRTC</key>
 		<data>
-		S3TFPFCU9EkJSoXLadKjmVhkNzY=
+		+k4E/F3qspVLZNfJ5WL4UuOh/zQ=
 		</data>
 		<key>Frameworks/WebRTC.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -26,7 +26,7 @@
 		</data>
 		<key>Headers/TiPhoneManager.h</key>
 		<data>
-		PvSWWx4ts2cpPABBd22D3sasTQw=
+		oBscRuCHOVw1gOpgSu3KQmKDi8g=
 		</data>
 		<key>Headers/TiPhoneSDK.h</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		8fI63SS5AvLkf6zd0iUFxGXYk6o=
+		9JxARxNVm/brZbmJDrTMUUjSlCk=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -69,11 +69,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			S3TFPFCU9EkJSoXLadKjmVhkNzY=
+			+k4E/F3qspVLZNfJ5WL4UuOh/zQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			cJ/yOz3GuxTadpZvlHUnxtqrpzsPgX7HEtGJbIZ+8e8=
+			zEvnVRGVkd9rJe6du+8F81xYwHMZNComTN3FawTLCDA=
 			</data>
 		</dict>
 		<key>Frameworks/WebRTC.framework/_CodeSignature/CodeResources</key>
@@ -102,11 +102,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			PvSWWx4ts2cpPABBd22D3sasTQw=
+			oBscRuCHOVw1gOpgSu3KQmKDi8g=
 			</data>
 			<key>hash2</key>
 			<data>
-			Fp6dAbX5eVZYKIQHaoJmHxCO/cg9DICpafU75IxG3x8=
+			plrEGyoJcXACRlSz/g+rR/S8xHiVgMRC6mBwNR8kpZY=
 			</data>
 		</dict>
 		<key>Headers/TiPhoneSDK.h</key>

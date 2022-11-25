@@ -26,7 +26,7 @@
 		</data>
 		<key>Headers/TiPhoneManager.h</key>
 		<data>
-		PvSWWx4ts2cpPABBd22D3sasTQw=
+		oBscRuCHOVw1gOpgSu3KQmKDi8g=
 		</data>
 		<key>Headers/TiPhoneSDK.h</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		DWMBVvSK+aqc1x9xYW4t43vmZMs=
+		v1cq+qTitJ9LMWzBCyO/MSGseio=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -102,11 +102,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			PvSWWx4ts2cpPABBd22D3sasTQw=
+			oBscRuCHOVw1gOpgSu3KQmKDi8g=
 			</data>
 			<key>hash2</key>
 			<data>
-			Fp6dAbX5eVZYKIQHaoJmHxCO/cg9DICpafU75IxG3x8=
+			plrEGyoJcXACRlSz/g+rR/S8xHiVgMRC6mBwNR8kpZY=
 			</data>
 		</dict>
 		<key>Headers/TiPhoneSDK.h</key>

@@ -17,8 +17,9 @@ typedef enum : NSUInteger {
 
 // 平台类型
 typedef enum : NSUInteger {
-    TiPhonePlatformType_CTI,
-    TiPhonePlatformType_Clink2,
+    TiPhonePlatformType_CTI, // CTI
+    TiPhonePlatformType_Clink2, // clink2
+    TiPhonePlatformType_Mobile // 云客服
 } TiPhonePlatformType;
 
 
