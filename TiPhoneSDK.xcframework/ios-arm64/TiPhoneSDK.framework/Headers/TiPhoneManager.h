@@ -19,14 +19,13 @@ typedef enum : NSUInteger {
 typedef enum : NSUInteger {
     TiPhonePlatformType_CTI, // CTI
     TiPhonePlatformType_Clink2, // clink2
-    TiPhonePlatformType_Mobile // 云客服
 } TiPhonePlatformType;
 
 
 @interface TiPhoneManager : NSObject
 
 
-+ (instancetype)sharedTestManger;
++ (instancetype)sharedTiPhoneManager;
 
 /**
  初始化对象
