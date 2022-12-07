@@ -17,3 +17,4 @@ FOUNDATION_EXPORT const unsigned char TiPhoneSDKVersionString[];
 
 #import <TiPhoneSDK/TiPhoneManager.h>
 #import <TiPhoneSDK/TiPhoneListener.h>
+#import <TiPhoneSDK/TiLoginModel.h>

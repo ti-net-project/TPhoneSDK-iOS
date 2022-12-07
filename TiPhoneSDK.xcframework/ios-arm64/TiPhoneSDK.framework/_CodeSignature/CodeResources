@@ -14,11 +14,15 @@
 		</data>
 		<key>Frameworks/WebRTC.framework/WebRTC</key>
 		<data>
-		CAum8nlMXDSW8v6kuaPOSWieWGs=
+		dpd3mNAzWH+LdeOQNqGFBf+E1t0=
 		</data>
 		<key>Frameworks/WebRTC.framework/_CodeSignature/CodeResources</key>
 		<data>
 		TADv26tkOPJdbrASqCfooWBxF+A=
+		</data>
+		<key>Headers/TiLoginModel.h</key>
+		<data>
+		QaroKCa4KadLoNANMOfruO5uryk=
 		</data>
 		<key>Headers/TiPhoneListener.h</key>
 		<data>
@@ -26,15 +30,15 @@
 		</data>
 		<key>Headers/TiPhoneManager.h</key>
 		<data>
-		yjHxrbzeYqQY+2tQncYNZ18OSi4=
+		JfH/QNU2IkOTgy9VgYUp1SuNTfg=
 		</data>
 		<key>Headers/TiPhoneSDK.h</key>
 		<data>
-		q+3vaFeiERxSVeJHT0Ix9GyAybA=
+		AB64V8HB0rIXs0MS93a8OjwFoZk=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		esrO0kCOlax6qVCHQPY7X1+W5N0=
+		lq96zyR4mW0rAsO/oUVg+THxRVQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -69,11 +73,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			CAum8nlMXDSW8v6kuaPOSWieWGs=
+			dpd3mNAzWH+LdeOQNqGFBf+E1t0=
 			</data>
 			<key>hash2</key>
 			<data>
-			ObwmX0CjPSz8ja8Hszx+GioeJoo/5ZGIEaOCuD6yI4Q=
+			y8JOv4T6GxCEGUUfknZuMKrckB4L38JYvhHCMAGp1xU=
 			</data>
 		</dict>
 		<key>Frameworks/WebRTC.framework/_CodeSignature/CodeResources</key>
@@ -85,6 +89,17 @@
 			<key>hash2</key>
 			<data>
 			31M4HPzy+FIaH/i2oTatA86X6NPEv/97yMkBVX9hFGY=
+			</data>
+		</dict>
+		<key>Headers/TiLoginModel.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			QaroKCa4KadLoNANMOfruO5uryk=
+			</data>
+			<key>hash2</key>
+			<data>
+			F4XXAmDlA2O2xTt+zjRdTReV0/0W3QQEeHiQQT/CWT4=
 			</data>
 		</dict>
 		<key>Headers/TiPhoneListener.h</key>
@@ -102,22 +117,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			yjHxrbzeYqQY+2tQncYNZ18OSi4=
+			JfH/QNU2IkOTgy9VgYUp1SuNTfg=
 			</data>
 			<key>hash2</key>
 			<data>
-			3yJMMjLca9zSA4AA29l0QzmYT+MYM/JofJ9PAnQlz0M=
+			HCAdFkWfckRp/u5M4hE5fTuREK9PWS+delQfrGL3g+g=
 			</data>
 		</dict>
 		<key>Headers/TiPhoneSDK.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			q+3vaFeiERxSVeJHT0Ix9GyAybA=
+			AB64V8HB0rIXs0MS93a8OjwFoZk=
 			</data>
 			<key>hash2</key>
 			<data>
-			ljullLAYwf9hgsbo/tU++PiaiKCMOlspeu5icv3mRGY=
+			NEQhLOwTpqMuRcXpacoIOBrl+IWPT05Exo08144DNeQ=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
