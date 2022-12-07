@@ -14,7 +14,7 @@
 		</data>
 		<key>Frameworks/WebRTC.framework/WebRTC</key>
 		<data>
-		dpd3mNAzWH+LdeOQNqGFBf+E1t0=
+		CAum8nlMXDSW8v6kuaPOSWieWGs=
 		</data>
 		<key>Frameworks/WebRTC.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		lq96zyR4mW0rAsO/oUVg+THxRVQ=
+		o1RcuvYdEeCIu+nOjRCqy4IopWo=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -73,11 +73,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			dpd3mNAzWH+LdeOQNqGFBf+E1t0=
+			CAum8nlMXDSW8v6kuaPOSWieWGs=
 			</data>
 			<key>hash2</key>
 			<data>
-			y8JOv4T6GxCEGUUfknZuMKrckB4L38JYvhHCMAGp1xU=
+			ObwmX0CjPSz8ja8Hszx+GioeJoo/5ZGIEaOCuD6yI4Q=
 			</data>
 		</dict>
 		<key>Frameworks/WebRTC.framework/_CodeSignature/CodeResources</key>
