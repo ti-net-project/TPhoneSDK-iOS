@@ -22,7 +22,7 @@
 		</data>
 		<key>Headers/TiLoginModel.h</key>
 		<data>
-		QaroKCa4KadLoNANMOfruO5uryk=
+		aqgjHqdGbl1ON8IQM9Z091Y5W00=
 		</data>
 		<key>Headers/TiPhoneListener.h</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Headers/TiPhoneManager.h</key>
 		<data>
-		JfH/QNU2IkOTgy9VgYUp1SuNTfg=
+		13uEkEY29a1VZNH//tSEXaPfMdg=
 		</data>
 		<key>Headers/TiPhoneSDK.h</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		SlvhRYsOmucYlWf9tt+9GNaQKDI=
+		ViTeP2BYcs0FB1+xxlHNmjaeE/0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -95,11 +95,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			QaroKCa4KadLoNANMOfruO5uryk=
+			aqgjHqdGbl1ON8IQM9Z091Y5W00=
 			</data>
 			<key>hash2</key>
 			<data>
-			F4XXAmDlA2O2xTt+zjRdTReV0/0W3QQEeHiQQT/CWT4=
+			TU4aeMOwXFKIT2EUGeFwA930B2mW4Mc01QIt4sCTsQY=
 			</data>
 		</dict>
 		<key>Headers/TiPhoneListener.h</key>
@@ -117,11 +117,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			JfH/QNU2IkOTgy9VgYUp1SuNTfg=
+			13uEkEY29a1VZNH//tSEXaPfMdg=
 			</data>
 			<key>hash2</key>
 			<data>
-			HCAdFkWfckRp/u5M4hE5fTuREK9PWS+delQfrGL3g+g=
+			KJqrFHS/Qi0xtlxxI038sUw2lajvrZxBhdn7SI4iFxQ=
 			</data>
 		</dict>
 		<key>Headers/TiPhoneSDK.h</key>

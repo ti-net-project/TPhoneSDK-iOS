@@ -46,7 +46,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param oldPassword 旧密码
  @param newPassword 新密码
  */
-- (void)changePassword:(NSString *)oldPassword newPassword:(NSString *)newPassword success:(nullable TiSuccessCallback)successBlock error:(nullable TiFailureCallback)errorBlock;
+- (void)changePwd:(NSString *)oldPassword newPassword:(NSString *)newPassword success:(nullable TiSuccessCallback)successBlock error:(nullable TiFailureCallback)errorBlock;
 
 /**
  拨打电话

@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "TiPhoneSDK"
-  spec.version      = "10.3.0.4"
+  spec.version      = "11.0.1"
   spec.summary      = "TiPhoneSDK iOS 实时语音呼叫SDK"
 
   spec.description  = <<-DESC
