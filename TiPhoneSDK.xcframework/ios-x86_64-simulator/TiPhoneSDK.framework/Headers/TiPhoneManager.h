@@ -26,12 +26,13 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  座席上线接口
  @param loginModel 登录参数模型
+ @param webSocketDelegate 监听登录事件 Clink2专用
  @param successBlock  登录成功的回调
  @param errorBlock   登录失败的回调 [status:失败的错误码]
  
  注: strCrmId和strCrmPassword是一对鉴权方式  strCno和strEnterpriseToken是一对鉴权方式
 */
-- (void)loginTiPhone:(TiLoginModel *)loginModel success:(nullable TiSuccessCallback)successBlock error:(nullable TiFailureCallback)errorBlock;
+- (void)loginTiPhone:(TiLoginModel *)loginModel webSocketDelegate:(nullable id <TiLoginMessageListener>)webSocketDelegate success:(nullable TiSuccessCallback)successBlock error:(nullable TiFailureCallback)errorBlock;
 
 /**
  认证语音验证码
@@ -52,28 +53,24 @@ NS_ASSUME_NONNULL_BEGIN
  拨打电话
  @param number 需要拨打的手机号
  @param obClid 客户外显号码
- @param requestUniqueId 通话的唯一标识 如果传入为@"" 则sdk生成并在消息中返回所生成的唯一标识 P-Tinet-Request-Unique-Id
- @param userField 自定义参数  注:key/value 键值对最多支持5对，key小于20字节，value小于100字节
+ @param requestUniqueId 通话的唯一标识 如果不传 则SDK中会自动生成
+ @param userField 自定义参数
+ ex: @"{\"id\":\"xxxxxxxx\",\"workNum\":\"xxxxxxx\",\"depId\":\"xxxxxx\"}"
 */
 -(void)call:(NSString *)number obClid:(nullable NSString *) obClid
 requestUniqueId:(nullable NSString*)requestUniqueId userField:(nullable NSDictionary *)userField;
 
 /**
- 设置回调接口(回调消息为拨打电话之后的消息) ， 必须在登录之前调用
+ 外呼事件监听 ， 必须在登录之前调用
  @param listener TiPhoneMessageListener接口的实例
  */
 -(void)setOnEventListener:(id<TiOnEventListener>)listener;
-
-
-/// 监听登录事件 ，必须在登录之前调用 （TiPhonePlatformType_Clink2专用）
-@property (nonatomic, weak) id <TiLoginMessageListener> webSocketDelegate;
 
 /**
  设置回呼监听 需要在登录成功之后调用
 @param listener TiIncomingMessageListener接口的实例
 */
 -(void)setIncomingMessageListener:(id<TiIncomingMessageListener>)listener;
-
 
 /**
  挂断电话
